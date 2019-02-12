@@ -30,10 +30,15 @@
         // 1. What.
         console.log(data[0].course)
         const app = <div className="row">
-                <Card team="falcons" title="React. From the Beginning" />
-                <Card title="Unity Game Development" />
-                <Card title="Apache Kafka Series" />
-                <Card title="Music Production in Logic Pro X" />
+                {/* <Card image={data[0].image} course={data[0].course} instructor={data[0].instructor} />
+                <Card image={data[1].image} course={data[1].course} instructor={data[1].instructor} />
+                <Card image={data[2].image} course={data[2].course} instructor={data[2].instructor} />
+                <Card image={data[3].image} course={data[3].course} instructor={data[3].instructor} /> */}
+                <Card data={data[0]} />
+                <Card data={data[1]} />
+                <Card data={data[2]} />
+                <Card data={data[3]} />
+
             </div>
         // 2. Where.
         console.log(app)
