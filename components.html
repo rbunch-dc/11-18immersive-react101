@@ -22,33 +22,18 @@
     
     <div id="root"></div>
 
+    <script type="text/babel" src="Card.js"></script>
     <script type="text/babel">
-
-        const name = "Robert Bunch2";
-        const title = "React From the Beginning";
-        const saleOn = false;
-        const markup = <div className="row">
-            <div className="col s2">
-                <div className="card hoverable small">
-                    <div className="card-image">
-                        <img src="http://lorempixel.com/400/400/nature/" />
-                    </div>
-                    <div className="card-content">
-                        <p>{title}</p>
-                        <p>{name}</p>
-                    </div>
-                    <div className="card-action">
-                        <a href="#">${saleOn ? 9.99 : 59.99}</a>
-                    </div>
-                </div>
-            </div>	
-        </div>
-
         ReactDOM.render(
-            markup,
+            <div>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </div>,
             document.getElementById('root')
-        ); 
-    </script>
+        );
+     </script>
 
 </body>
 </html>
