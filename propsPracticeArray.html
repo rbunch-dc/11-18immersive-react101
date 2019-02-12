@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
@@ -28,24 +27,17 @@
         // ReactDOM.render takes the React elements and 
         // puts them in the actual DOM. It needs to know:
         // 1. What.
-        console.log(data[0].course)
-        const app = <div className="row">
-                {/* <Card image={data[0].image} course={data[0].course} instructor={data[0].instructor} />
-                <Card image={data[1].image} course={data[1].course} instructor={data[1].instructor} />
-                <Card image={data[2].image} course={data[2].course} instructor={data[2].instructor} />
-                <Card image={data[3].image} course={data[3].course} instructor={data[3].instructor} /> */}
-                <Card data={data[0]} />
-                <Card data={data[1]} />
-                <Card data={data[2]} />
-                <Card data={data[3]} />
-
-            </div>
-        console.log(app)
         
-        const root = document.getElementById('root');
+        let cards = data.map((obj)=>{
+            return <Card data={obj} />
+        })
         console.dir(root)
 
-        ReactDOM.render(app,root);
+        ReactDOM.render(<div className="row">
+                {cards}
+            </div>,
+            document.getElementById('root')
+        );
      </script>
 
 </body>
