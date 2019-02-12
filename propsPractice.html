@@ -22,11 +22,13 @@
     
     <div id="root"></div>
 
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/babel" src="Card.js"></script>
     <script type="text/babel">
         // ReactDOM.render takes the React elements and 
         // puts them in the actual DOM. It needs to know:
         // 1. What.
+        console.log(data[0].course)
         const app = <div className="row">
                 <Card team="falcons" title="React. From the Beginning" />
                 <Card title="Unity Game Development" />
